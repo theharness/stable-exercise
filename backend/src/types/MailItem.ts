@@ -2,13 +2,13 @@ import ActionDetails from "./ActionDetails";
 
 type MailItem = {
   id: string
-  businessRecipient: string | null
-  forward: ActionDetails | null
+  businessRecipient?: string
+  forward?: ActionDetails
   from: string
   imageUrl: string
   individualRecipient?: string
-  scan: ActionDetails | null
-  shred: ActionDetails | null
+  scan?: ActionDetails
+  shred?: ActionDetails
   timestamp: number
 };
 
