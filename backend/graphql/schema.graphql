@@ -1,0 +1,29 @@
+type MailItem {
+    id: ID!
+    businessRecipient: String
+    forward: ActionDetails
+    from: String!
+    imageUrl: String!
+    individualRecipient: String
+    scan: ActionDetails
+    shred: ActionDetails
+    timestamp: Float!
+}
+
+
+type ActionDetails {
+    status: Status!
+}
+
+enum Status {
+    completed
+    processing
+}
+
+type Query {
+    listMail: [MailItem]
+}
+
+schema {
+    query: Query
+}
